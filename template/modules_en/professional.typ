@@ -1,53 +1,61 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-entry, cv-entry-start, cv-entry-continued
+#import "@preview/brilliant-cv:3.1.1": cv-section, cv-entry
 
 
-#cv-section("Professional Experience")
+#cv-section("Experience")
 
-#cv-entry-start(
-  society: [XYZ Corporation],
-  logo: image("../assets/logos/xyz_corp.png"),
-  location: [San Francisco, CA],
-)
-
-#cv-entry-continued(
-  title: [Director of Data Science],
+#cv-entry(
+  title: [Cloud Platform Architect],
+  society: [EDF (Europe's largest energy company)],
+  date: [Nov 2024 - Present],
+  location: [Bordeaux],
   description: list(
-    [Lead a team of data scientists and analysts to develop and implement data-driven strategies, develop predictive models and algorithms to support decision-making across the organization],
-    [Collaborate with executive leadership to identify business opportunities and drive growth, implement best practices for data governance, quality, and security],
+    [*Built* cloud platform from scratch to production],
+    [Shipped across *5+ environments* with *zero unplanned downtime*],
+    [Enabled *14 developers* to deploy autonomously via self-service pipelines],
+    [*Recruited and trained* engineers to own and operate the platform],
   ),
-  tags: ("Dataiku", "Snowflake", "SparkSQL"),
-)
-
-#cv-entry-continued(
-  title: [Data Scientist],
-  date: [2017 - 2020 #linebreak() 2021 - 2022],
-  description: list(
-    [Analyze large datasets with SQL and Python, collaborate with teams to uncover business insights],
-    [Create data visualizations and dashboards in Tableau, develop and maintain data pipelines with AWS],
-  ),
+  tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
 )
 
 #cv-entry(
-  title: [Data Analyst],
-  society: [ABC Company],
-  logo: image("../assets/logos/abc_company.png"),
-  date: [2017 - 2020],
-  location: [New York, NY],
+  title: [CI/CD Platform Architect],
+  society: [Ingenico (Global payment leader)],
+  date: [Aug 2023 - Sep 2024],
+  location: [Valence],
   description: list(
-    [Analyze large datasets with SQL and Python, collaborate with teams to uncover business insights],
-    [Create data visualizations and dashboards in Tableau, develop and maintain data pipelines with AWS],
+    [*Halved* time-to-production by automating the entire build-to-deploy path],
+    [Teams now ship *10+ releases/day* without manual intervention],
+    [Built the CI/CD platform used across *multiple product teams*],
+    [*Trained* dev teams on CI/CD best practices],
   ),
+  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
 )
 
 #cv-entry(
-  title: [Data Analysis Intern],
-  society: [PQR Corporation],
-  logo: image("../assets/logos/pqr_corp.png"),
-  date: list(
-    [Summer 2017],
-    [Summer 2016],
+  title: [Infrastructure Engineer],
+  society: [Freelance (Hosting & Infrastructure)],
+  date: [Jun 2019 - Jul 2023],
+  location: [Grenoble],
+  description: list(
+    [*500+ VMs* managed across multi-cloud with *99.9% uptime*],
+    [Critical incidents resolved in *under 30 minutes* on average],
+    [Optimizations that cut infra costs by *40%* and support tickets by *60%*],
+    [*4 years* of 24/7 on-call with *zero* unresolved major incidents],
   ),
-  location: [Chicago, IL],
-  description: list([Assisted with data cleaning, processing, and analysis using Python and Excel, participated in team meetings and contributed to project planning and execution]),
+  tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
+)
+
+#cv-entry(
+  title: [Infrastructure Engineer],
+  society: [CEA (French Nuclear Research Agency)],
+  date: [Jan 2020 - Jun 2020],
+  location: [Grenoble],
+  description: list(
+    [Batch processing time cut from *1 hour to 5 minutes*],
+    [Data pipelines *fully automated*, zero manual intervention],
+    [*70% storage* freed through data optimization],
+    [*4 hours saved* per day per researcher on data preparation],
+  ),
+  tags: ("OpenStack", "Python", "GitHub Actions", "Linux", "Automation"),
 )

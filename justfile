@@ -55,7 +55,7 @@ open: build
 watch:
     @echo "👁️  Watching for changes in template..."
     @mkdir -p temp
-    typst watch template/cv.typ temp/cv.pdf
+    typst watch template/cv.typ temp/cv.pdf --root .
 
 # Sync dependencies to latest versions
 sync:

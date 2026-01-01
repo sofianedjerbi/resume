@@ -4,40 +4,27 @@
 
 #cv-section("Skills")
 
-#cv-skill-with-level(
-  type: [Languages],
-  level: 4,
-  info: [English (Native) #h-bar() French (Fluent) #h-bar() Chinese (Conversational)],
+#cv-skill(
+  type: [Cloud],
+  info: [*AWS*, Azure, *Terraform*, Terragrunt, *Kubernetes*, Docker, Helm, ArgoCD],
 )
 
-#cv-skill-with-level(
+#cv-skill(
+  type: [Systems],
+  info: [*Linux*, Bash, *GitOps*, GitHub Actions, GitLab CI],
+)
+
+#cv-skill(
   type: [Programming],
-  level: 5,
-  info: [Python #h-bar() SQL #h-bar() R],
+  info: [*Python*, *Go*, Rust, TypeScript],
 )
 
 #cv-skill(
-  type: [Tech Stack],
-  info: [Tableau #h-bar() Snowflake #h-bar() AWS #h-bar() Docker #h-bar() Git],
+  type: [Practices],
+  info: [*Platform Engineering*, *SRE*, FinOps, DevSecOps, Scrum],
 )
 
 #cv-skill(
-  type: [Frameworks & Libraries],
-  info: [Pandas #h-bar() NumPy #h-bar() Scikit-learn #h-bar() TensorFlow #h-bar() FastAPI],
-)
-
-// Skill tags example
-#cv-skill(
-  type: [Certifications],
-  info: [
-    #cv-skill-tag([AWS Certified])
-    #cv-skill-tag([Google Analytics])
-    #cv-skill-tag([Tableau Desktop])
-    #cv-skill-tag([Scrum Master])
-  ],
-)
-
-#cv-skill(
-  type: [Personal Interests],
-  info: [Swimming #h-bar() Cooking #h-bar() Reading #h-bar() Photography],
+  type: [Languages],
+  info: [*French* (Native), *English* (Professional)],
 )

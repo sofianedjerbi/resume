@@ -21,6 +21,7 @@
     str,
   ),
   last-name: (str) => text(font: header-font, size: 32pt, weight: "bold", str),
+  title: (str) => text(size: 12pt, weight: "bold", fill: accent-color, str),
   info: (str) => text(size: header-info-font-size, fill: accent-color, str),
   quote: (str) => text(size: 10pt, weight: "medium", style: "italic", fill: accent-color, str),
 )
@@ -114,15 +115,16 @@
 
 /// Create header name section
 /// -> content
-#let _make-header-name-section(styles, non-latin, non-latin-name, first-name, last-name, personal-info, header-quote) = {
+#let _make-header-name-section(styles, non-latin, non-latin-name, first-name, last-name, personal-info, header-title, header-quote) = {
   table(
     columns: 1fr,
     inset: 0pt,
     stroke: none,
-    row-gutter: 6mm,
+    row-gutter: 4mm,
     if non-latin {
       (styles.first-name)(non-latin-name)
     } else [#(styles.first-name)(first-name) #h(5pt) #(styles.last-name)(last-name)],
+    .. if header-title != none { ([#(styles.title)(header-title)],) },
     [#(styles.info)(_make-header-info(personal-info, _personal-info-icons))],
     .. if header-quote != none { ([#(styles.quote)(header-quote)],) },
   )
@@ -174,6 +176,7 @@
   let personal-info = metadata.personal.info
   let first-name = metadata.personal.first_name
   let last-name = metadata.personal.last_name
+  let header-title = metadata.lang.at(metadata.language).at("header_title", default: none)
   let header-quote = metadata.lang.at(metadata.language).at("header_quote", default: none)
   let display-profile-photo = metadata.layout.header.display_profile_photo
   let profile-photo-radius = eval(metadata.layout.header.at("profile_photo_radius", default: "50%"))
@@ -197,7 +200,7 @@
   
   // Create components
   let name-section = _make-header-name-section(
-    styles, non-latin, non-latin-name, first-name, last-name, personal-info, header-quote
+    styles, non-latin, non-latin-name, first-name, last-name, personal-info, header-title, header-quote
   )
   
   let photo-section = _make-header-photo-section(display-profile-photo, profile-photo, profile-photo-radius)
@@ -381,22 +384,23 @@
 /// Create entry style functions
 /// -> dictionary
 #let _entry-styles(accent-color, before-entry-description-skip) = (
-  a1: (str) => text(size: 10pt, weight: "bold", str),
+  a1: (str) => text(size: 12pt, weight: "bold", str),
   a2: (str) => align(right, text(weight: "medium", fill: accent-color, style: "oblique", str)),
-  b1: (str) => text(size: 8pt, fill: accent-color, weight: "medium", smallcaps(str)),
-  b2: (str) => align(right, text(size: 8pt, weight: "medium", fill: gray, style: "oblique", str)),
+  b1: (str) => text(size: 10pt, fill: accent-color, weight: "medium", smallcaps(str)),
+  b2: (str) => align(right, text(size: 10pt, weight: "medium", fill: gray, style: "oblique", str)),
   dates: (dates) => [
     #set list(marker: [])
     #dates
   ],
   description: (str) => text(
+    size: 10pt,
     fill: _regular-colors.lightgray,
     {
       v(before-entry-description-skip)
       str
     },
   ),
-  tag: (str) => align(center, text(size: 8pt, weight: "regular", str)),
+  tag: (str) => align(center, text(size: 10pt, weight: "regular", str)),
 )
 
 /// Create entry tag list
