@@ -1,20 +1,30 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-skill, h-bar
+#import "@preview/brilliant-cv:3.1.1": cv-section, cv-skill, cv-skill-with-level, cv-skill-tag, h-bar
 
 
 #cv-section("Compétences")
 
 #cv-skill(
+  type: [Cloud],
+  info: [*AWS*, Azure, *Terraform*, Terragrunt, *Kubernetes*, Docker, Helm, ArgoCD],
+)
+
+#cv-skill(
+  type: [Systèmes],
+  info: [*Linux*, Bash, *GitOps*, GitHub Actions, GitLab CI],
+)
+
+#cv-skill(
+  type: [Programmation],
+  info: [*Python*, *Go*, Rust, TypeScript],
+)
+
+#cv-skill(
+  type: [Pratiques],
+  info: [*Platform Engineering*, *SRE*, FinOps, DevSecOps, Scrum],
+)
+
+#cv-skill(
   type: [Langues],
-  info: [Anglais #h-bar() Français #h-bar() Chinois],
-)
-
-#cv-skill(
-  type: [Tech Stack],
-  info: [Tableau #h-bar() Python (Pandas/Numpy) #h-bar() PostgreSQL],
-)
-
-#cv-skill(
-  type: [Centres d'intérêt],
-  info: [Natation #h-bar() Cuisine #h-bar() Lecture],
+  info: [*Français* (Natif), *Anglais* (Professionnel)],
 )

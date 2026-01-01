@@ -19,12 +19,11 @@ dev:
 # Internal cleanup function (don't call directly)
 _dev-cleanup:
     @echo "🏗️  Building final version..."
-    @mkdir -p temp
-    @typst compile template/cv.typ temp/cv.pdf || @echo "⚠️  Build failed, but continuing cleanup..."
+    @just build || @echo "⚠️  Build failed, but continuing cleanup..."
     @just unlink || @echo "⚠️  Unlink failed or already unlinked"
     @just clean || true
     @echo "✅ Development lifecycle complete!"
-    @echo "💡 Your final CV is at temp/cv.pdf"
+    @echo "💡 Your CVs are at build/cv-en.pdf and build/cv-fr.pdf"
 
 # Link local package for development
 link:
@@ -41,21 +40,24 @@ unlink:
 
 # Build CV template for testing
 build:
-    @echo "🏗️  Building CV template..."
-    @mkdir -p temp
-    @typst compile template/cv.typ temp/cv.pdf
-    @echo "✅ CV built successfully at temp/cv.pdf"
+    @echo "🏗️  Building CV template (EN + FR)..."
+    @mkdir -p build
+    @typst compile template/cv.typ build/cv-en.pdf --root . --input language=en
+    @typst compile template/cv.typ build/cv-fr.pdf --root . --input language=fr
+    @echo "✅ CV built successfully at build/cv-en.pdf and build/cv-fr.pdf"
 
 # Build and open the result
 open: build
     @echo "👀 Opening generated CV..."
-    @open temp/cv.pdf
+    @open build/cv-en.pdf
 
 # Watch for changes and rebuild automatically
 watch:
-    @echo "👁️  Watching for changes in template..."
-    @mkdir -p temp
-    typst watch template/cv.typ temp/cv.pdf --root .
+    @echo "👁️  Watching for changes in template (EN + FR)..."
+    @mkdir -p build
+    typst watch template/cv.typ build/cv-en.pdf --root . --input language=en & \
+    typst watch template/cv.typ build/cv-fr.pdf --root . --input language=fr & \
+    wait
 
 # Sync dependencies to latest versions
 sync:
@@ -66,8 +68,7 @@ sync:
 # Clean build artifacts
 clean:
     @echo "🧹 Cleaning build artifacts..."
-    @find . -name "*.pdf" -not -path "./template/src/*" -delete
-    @rm -rf temp/
+    @rm -rf build/
     @echo "✅ Build artifacts cleaned"
 
 # Reset development environment

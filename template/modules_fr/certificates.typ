@@ -1,23 +1,25 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-honor
+#import "@preview/brilliant-cv:3.1.1": cv-section, cv-skill, h-bar
 
 
-#cv-section("Certificates")
+#cv-section("Certifications")
 
-#cv-honor(
-  date: [2022],
-  title: [AWS Certified Security],
-  issuer: [Amazon Web Services (AWS)],
+#cv-skill(
+  type: [AWS],
+  info: [*Solutions Architect Associate*, Developer Associate, Cloud Practitioner],
 )
 
-#cv-honor(
-  date: [2017],
-  title: [Applied Data Science with Python],
-  issuer: [Coursera],
+#cv-skill(
+  type: [Kubernetes],
+  info: [*CKA (Administrator)*, KCNA (Cloud Native Associate)],
 )
 
-#cv-honor(
-  date: [],
-  title: [Bases de données et requêtes SQL],
-  issuer: [OpenClassrooms],
+#cv-skill(
+  type: [HashiCorp],
+  info: [*Terraform Associate*],
+)
+
+#cv-skill(
+  type: [Gruntwork],
+  info: [*Terragrunt Ambassador*],
 )

@@ -46,3 +46,9 @@ language = "en"
     header_quote = "6 years building platforms that scale. Trained teams to run them without me.\nTerragrunt Ambassador. Café Cloud founder (450+ members)."
     cv_footer = ""
     letter_footer = ""
+
+[lang.fr]
+    header_title = "Cloud Platform Architect"
+    header_quote = "6 ans en Platform Engineering. Je rends les équipes autonomes en prod.\nTerragrunt Ambassador. Fondateur du Café Cloud (450+ membres)."
+    cv_footer = ""
+    letter_footer = ""

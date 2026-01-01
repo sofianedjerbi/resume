@@ -27,7 +27,7 @@
     [*Halved* time-to-production by automating the entire build-to-deploy path],
     [Teams now ship *10+ releases/day* without manual intervention],
     [Built the CI/CD platform used across *multiple product teams*],
-    [*Trained* dev teams on CI/CD best practices],
+    [*Trained* dev teams on DevOps best practices],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
 )
