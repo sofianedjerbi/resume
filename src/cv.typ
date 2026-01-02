@@ -388,6 +388,7 @@
   a2: (str) => align(right, text(weight: "medium", fill: accent-color, style: "oblique", str)),
   b1: (str) => text(size: 10pt, fill: accent-color, weight: "medium", smallcaps(str)),
   b2: (str) => align(right, text(size: 10pt, weight: "medium", fill: gray, style: "oblique", str)),
+  contract-type: (str) => text(size: 9pt, weight: "regular", fill: gray, [ · #str]),
   dates: (dates) => [
     #set list(marker: [])
     #dates
@@ -549,6 +550,7 @@
   description: none,
   logo: "",
   tags: (),
+  contract-type: none,
   metadata: metadata,
 ) = {
   // Extract parameters
@@ -556,10 +558,10 @@
   let before-entry-skip = params.before-entry-skip
   let before-entry-description-skip = params.before-entry-description-skip
   let date-width = params.date-width
-  
+
   // Create styles
   let styles = _entry-styles(accent-color, before-entry-description-skip)
-  
+
   // Layout settings
   let display-logo = metadata.layout.entry.display_logo
   let society-first-setting = metadata.layout.entry.display_entry_society_first
@@ -592,6 +594,7 @@
             align: auto,
             {
               (styles.a1)(if society-first-setting { society } else { title })
+              if contract-type != none { (styles.contract-type)(contract-type) }
             },
             {
               (styles.b1)(if society-first-setting { title } else { society })
@@ -681,6 +684,7 @@
 /// - description (array): The description of the entry. It can be a string or an array of strings.
 /// - logo (image): The logo of the society. If empty, no logo will be displayed.
 /// - tags (array): The tags of the entry.
+/// - contract-type (str): The type of contract (e.g., "Contract", "Freelance", "Fixed-term").
 /// - metadata (array): (optional) the metadata read from the TOML file.
 /// - awesome-colors (array): (optional) the awesome colors of the CV.
 /// -> content
@@ -692,6 +696,7 @@
   description: "Description",
   logo: "",
   tags: (),
+  contract-type: none,
   metadata: none,
   // New parameter names (recommended)
   awesome-colors: none,
@@ -711,6 +716,7 @@
     description: description,
     logo: logo,
     tags: tags,
+    contract-type: contract-type,
     metadata: metadata,
   )
 }
