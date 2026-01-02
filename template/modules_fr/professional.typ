@@ -10,10 +10,10 @@
   date: [Nov 2024 - Présent],
   location: [Bordeaux],
   description: list(
-    [*Conçu* une plateforme cloud de zéro jusqu'en production],
-    [Déployée sur *5+ environnements* avec *zéro interruption non planifiée*],
-    [Permis à *14 développeurs* de déployer en autonomie via des pipelines self-service],
-    [*Recruté et formé* des ingénieurs pour opérer la plateforme],
+    [Conception d'une plateforme cloud from scratch pour *infrastructure énergétique critique*],
+    [*Traçabilité complète*, *IAM/RBAC*, *séparation des responsabilités* et isolation des environnements dès le départ],
+    [*14 développeurs* déployant en autonomie sur *5+ environnements* via self-service],
+    [Constitution d'une *équipe plateforme* avec ownership opérationnel complet],
   ),
   tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
 )
@@ -24,26 +24,12 @@
   date: [Août 2023 - Sep 2024],
   location: [Valence],
   description: list(
-    [*Divisé par 2* le time-to-production en automatisant tout le cycle build-to-deploy],
-    [Les équipes livrent maintenant *10+ releases/jour* sans intervention manuelle],
-    [Construit la plateforme CI/CD utilisée par *plusieurs équipes produit*],
-    [*Formé* les équipes dev aux bonnes pratiques DevOps],
+    [Délai de mise en production *divisé par 2* grâce à l'automatisation de l'intégration et du déploiement],
+    [*10+ releases/jour* livrées par les équipes, sans intervention manuelle],
+    [Construction d'une plateforme CI/CD avec *security gates* et *least-privilege*, utilisée par *plusieurs équipes*],
+    [Définition des *standards DevOps* et accompagnement des équipes à l'adoption],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
-)
-
-#cv-entry(
-  title: [Infrastructure Engineer],
-  society: [Freelance (Hébergement & Infrastructure)],
-  date: [Juin 2019 - Juil 2023],
-  location: [Grenoble],
-  description: list(
-    [*500+ VMs* gérées en multi-cloud avec *99.9% de disponibilité*],
-    [Incidents critiques résolus en *moins de 30 minutes* en moyenne],
-    [Optimisations réduisant les coûts infra de *40%* et les tickets de *60%*],
-    [*4 ans* d'astreinte 24/7 avec *zéro* incident majeur non résolu],
-  ),
-  tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
 )
 
 #cv-entry(
@@ -52,10 +38,24 @@
   date: [Jan 2020 - Juin 2020],
   location: [Grenoble],
   description: list(
-    [Temps de traitement batch réduit de *1 heure à 5 minutes*],
-    [Pipelines de données *entièrement automatisés*, zéro intervention manuelle],
-    [*70% de stockage* libéré grâce à l'optimisation des données],
-    [*4 heures gagnées* par jour par chercheur sur la préparation des données],
+    [Traitement batch sur *OpenStack souverain* réduit de *1 heure à 5 minutes*],
+    [*Pipelines de données conformes* pour recherche sensible, entièrement automatisés],
+    [Libération de *70%* de stockage via l'optimisation des données],
+    [*4 heures gagnées* par jour par chercheur],
   ),
   tags: ("OpenStack", "Python", "GitHub Actions", "Linux", "Automation"),
+)
+
+#cv-entry(
+  title: [Infrastructure Engineer],
+  society: [Freelance (Hébergement & Infrastructure)],
+  date: [Juin 2019 - Juil 2023],
+  location: [Grenoble],
+  description: list(
+    [*500+ VMs* sur infrastructure *européenne multi-tenant* avec *SLA 99.9%*],
+    [*Isolation des tenants*, segmentation réseau et séparation stricte des données],
+    [Coûts infra réduits de *40%*, demandes support de *60%* via automatisation],
+    [Astreinte 24/7 pendant *4 ans* avec *100% de conformité SLO*],
+  ),
+  tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
 )

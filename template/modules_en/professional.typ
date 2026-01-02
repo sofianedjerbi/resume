@@ -10,10 +10,10 @@
   date: [Nov 2024 - Present],
   location: [Bordeaux],
   description: list(
-    [*Built* cloud platform from scratch to production],
-    [Shipped across *5+ environments* with *zero unplanned downtime*],
-    [Enabled *14 developers* to deploy autonomously via self-service pipelines],
-    [*Recruited and trained* engineers to own and operate the platform],
+    [*Designed and built* a cloud platform from scratch for *critical energy infrastructure*],
+    [Full *audit trail*, *IAM/RBAC*, *segregation of duties*, and environment isolation from day one],
+    [*14 developers* deploying autonomously across *5+ environments* via self-service],
+    [Built and scaled a *platform team* with full operational ownership],
   ),
   tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
 )
@@ -24,10 +24,10 @@
   date: [Aug 2023 - Sep 2024],
   location: [Valence],
   description: list(
-    [*Halved* time-to-production by automating the entire build-to-deploy path],
+    [*Halved* time-to-production by automating integration and deployment],
     [Teams now ship *10+ releases/day* without manual intervention],
-    [Built the CI/CD platform used across *multiple product teams*],
-    [*Trained* dev teams on DevOps best practices],
+    [Built a CI/CD platform with *security gates* and *least-privilege*, used by *multiple teams*],
+    [Defined *DevOps standards* and enabled team adoption across the organization],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
 )
@@ -38,10 +38,10 @@
   date: [Jun 2019 - Jul 2023],
   location: [Grenoble],
   description: list(
-    [*500+ VMs* managed across multi-cloud with *99.9% uptime*],
-    [Critical incidents resolved in *under 30 minutes* on average],
-    [Optimizations that cut infra costs by *40%* and support tickets by *60%*],
-    [*4 years* of 24/7 on-call with *zero* unresolved major incidents],
+    [*500+ VMs* on *European multi-tenant* infrastructure with *99.9% SLA*],
+    [*Tenant isolation*, network segmentation, and strict data separation],
+    [Infra costs cut by *40%*, support requests by *60%* through automation],
+    [24/7 on-call for *4 years* with *100% SLO* compliance],
   ),
   tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
 )
@@ -52,8 +52,8 @@
   date: [Jan 2020 - Jun 2020],
   location: [Grenoble],
   description: list(
-    [Batch processing time cut from *1 hour to 5 minutes*],
-    [Data pipelines *fully automated*, zero manual intervention],
+    [Batch processing on *sovereign OpenStack* cut from *1 hour to 5 minutes*],
+    [*Compliant data pipelines* for sensitive research, fully automated],
     [*70% storage* freed through data optimization],
     [*4 hours saved* per day per researcher on data preparation],
   ),

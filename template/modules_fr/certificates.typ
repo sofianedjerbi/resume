@@ -18,8 +18,3 @@
   type: [HashiCorp],
   info: [*Terraform Associate*],
 )
-
-#cv-skill(
-  type: [Gruntwork],
-  info: [*Terragrunt Ambassador*],
-)

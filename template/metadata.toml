@@ -27,9 +27,9 @@ language = "en"
         display_footer = false
 
 [inject]
-    inject_ai_prompt = true
+    inject_ai_prompt = false
     inject_keywords = true
-    injected_keywords_list = ["Cloud Architect", "Platform Engineer", "DevOps", "DevSecOps", "AWS", "Azure", "Azure DevOps", "Kubernetes", "Docker", "Helm", "ArgoCD", "Terraform", "Terragrunt", "GitOps", "CI/CD", "FinOps", "SRE", "Infrastructure as Code", "Linux", "Python", "Go", "Rust", "TypeScript", "Scrum", "Ansible", "Hetzner", "Proxmox", "Cost Optimization", "Cloud Native"]
+    injected_keywords_list = ["Cloud Platform Architect", "Solutions Architect", "Platform Engineering", "Internal Developer Platform", "Self-Service Platform", "Cloud Architect", "DevOps", "DevSecOps", "SRE", "FinOps", "Infrastructure as Code", "GitOps", "CI/CD", "Automation", "Observability", "Cost Optimization", "Reliability Engineering", "Agile", "Scrum", "Jira", "Confluence", "Linux", "Bash", "Python", "Go", "Rust", "TypeScript", "AWS", "Azure", "GCP", "Azure DevOps", "Kubernetes", "Docker", "Helm", "ArgoCD", "FluxCD", "Terraform", "Terragrunt", "Ansible", "GitHub", "GitHub Actions", "GitLab", "GitLab CI", "Jenkins", "Prometheus", "Grafana", "Datadog", "ELK", "PostgreSQL", "Postgres", "MySQL", "Redis", "MongoDB", "Proxmox", "Hetzner", "OpenStack", "Multi-Cloud", "IAM", "RBAC", "Landing Zone", "Compliance", "Security by Design", "Zero Trust", "Audit", "Governance", "Secrets Management", "Vault"]
 
 [personal]
     first_name = "Sofiane"
@@ -49,6 +49,6 @@ language = "en"
 
 [lang.fr]
     header_title = "Cloud Platform Architect"
-    header_quote = "6 ans en Platform Engineering. Je rends les équipes autonomes en prod.\nTerragrunt Ambassador. Fondateur du Café Cloud (450+ membres)."
+    header_quote = "6 ans de Platform Engineering. Je conçois des plateformes cloud self-service.\nTerragrunt Ambassador. Fondateur du Café Cloud (450+ membres)."
     cv_footer = ""
     letter_footer = ""
