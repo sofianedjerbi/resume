@@ -28,7 +28,7 @@
   description: list(
     [Cycle de release *divisé par 2* grâce à l'automatisation de l'intégration et du déploiement],
     [*10+ releases/jour* livrées par les équipes, sans intervention manuelle],
-    [Construction d'une plateforme CI/CD avec *security gates* et *least-privilege*, utilisée par *plusieurs équipes* pour le développement de librairies],
+    [Construction d'une plateforme CI/CD avec *security gates*, utilisée par les *équipes librairies*],
     [Définition des *standards DevOps* avec les leads engineering, accompagnement à l'adoption],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),

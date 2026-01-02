@@ -28,7 +28,7 @@
   description: list(
     [*Halved* release cycles by automating integration and deployment],
     [Teams now ship *10+ releases/day* without manual intervention],
-    [Built a CI/CD platform with *security gates* and *least-privilege*, used by *multiple teams* for library development],
+    [Built a CI/CD platform with *security gates*, used by *multiple teams* for library development],
     [Defined *DevOps standards* with engineering leads, enabled adoption across the organization],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
