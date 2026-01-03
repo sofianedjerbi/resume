@@ -1,5 +1,5 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-skill, h-bar
+#import "../../src/lib.typ": cv-section, cv-skill, h-bar
 
 
 #cv-section("Certifications")

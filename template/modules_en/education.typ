@@ -1,5 +1,5 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-entry
+#import "../../src/lib.typ": cv-section, cv-entry
 
 
 #cv-section("Education")
@@ -9,5 +9,5 @@
   society: [Université Grenoble Alpes],
   date: [2019 - 2022],
   location: [France],
-  description: [Student-Entrepreneur status, alongside freelance work],
+  description: [Degree completed independently, alongside full-time freelance work],
 )
