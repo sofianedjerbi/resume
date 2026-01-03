@@ -53,7 +53,7 @@
       if paper_size == "us-letter" {
         (left: 2cm, right: 1.4cm, top: 1.2cm, bottom: 1.2cm)
         } else {
-        (left: 1.4cm, right: 1.4cm, top: 1cm, bottom: 1cm)
+        (left: 1.4cm, right: 1.4cm, top: 0.7cm, bottom: 0.7cm)
       }
     },
     footer: context _cv-footer(metadata),

@@ -6,8 +6,8 @@
 
 #cv-entry(
   title: [Licence Mathématiques & Informatique],
-  society: [Université française],
+  society: [Université Grenoble Alpes],
   date: [2019 - 2022],
   location: [France],
-  description: none,
+  description: [Statut Étudiant-Entrepreneur, en parallèle du freelance],
 )

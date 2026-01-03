@@ -9,5 +9,5 @@
   society: [Université Grenoble Alpes],
   date: [2019 - 2022],
   location: [France],
-  description: none,
+  description: [Student-Entrepreneur status, alongside freelance work],
 )

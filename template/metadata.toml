@@ -4,9 +4,9 @@ language = "en"
 
 [layout]
     awesome_color = "#3670a0"
-    before_section_skip = "8pt"
-    before_entry_skip = "2pt"
-    before_entry_description_skip = "1pt"
+    before_section_skip = "6pt"
+    before_entry_skip = "1pt"
+    before_entry_description_skip = "0pt"
     paper_size = "a4"
 
     [layout.fonts]
@@ -43,12 +43,12 @@ language = "en"
 
 [lang.en]
     header_title = "Cloud Platform Architect"
-    header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Café Cloud founder (450+ members)."
+    header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Relocating from France to Switzerland.\n*Looking for: Lead Platform Engineer roles.*"
     cv_footer = ""
     letter_footer = ""
 
 [lang.fr]
     header_title = "Cloud Platform Architect"
-    header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Fondateur du Café Cloud (450+ membres)."
+    header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Relocalisation de la France vers la Suisse.\n*Recherche : postes Lead Platform Engineer.*"
     cv_footer = ""
     letter_footer = ""

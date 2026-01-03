@@ -6,30 +6,30 @@
 
 #cv-entry(
   title: [Cloud Platform Architect],
-  society: [EDF (Leader européen de l'énergie)],
+  society: [EDF (Énergie)],
   date: [Nov 2024 - Présent],
   location: [Bordeaux],
   contract-type: [Freelance],
   description: list(
-    [Conception d'une plateforme cloud from scratch pour *infrastructure énergétique critique*],
-    [*Traçabilité complète*, IAM/RBAC, séparation des responsabilités, isolation des environnements],
-    [*14 développeurs* déployant en autonomie sur *5+ environnements* via self-service],
-    [Constitution d'une *équipe plateforme* en collaboration avec dev, sécurité et métier],
+    [Conception d'une *plateforme cloud from scratch* pour la nouvelle GED interne basée sur Nuxeo],
+    [Mise en place de *traçabilité complète*, IAM/RBAC, isolation des environnements et SLOs],
+    [Déploiement autonome pour *14* développeurs sur *5* environnements + environnements éphémères en self-service],
+    [Constitution et formation d'une *équipe plateforme* avec les équipes dev, sécurité et métier],
   ),
   tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
 )
 
 #cv-entry(
   title: [CI/CD Platform Architect],
-  society: [Ingenico (Leader mondial du paiement)],
+  society: [Ingenico (Paiement)],
   date: [Août 2023 - Sep 2024],
   location: [Valence],
   contract-type: [Freelance],
   description: list(
-    [Cycle de release *divisé par 2* grâce à l'automatisation de l'intégration et du déploiement],
-    [*10+ releases/jour* livrées par les équipes, sans intervention manuelle],
-    [Construction d'une plateforme CI/CD avec *security gates*, utilisée par les *équipes librairies*],
-    [Définition des *standards DevOps* avec les leads engineering, accompagnement à l'adoption],
+    [Conception d'une *plateforme CI/CD Java/Kotlin* standardisée, du build au deploy, avec sécurité intégrée],
+    [*Plusieurs dizaines de releases* par jour livrées par les équipes, sans intervention manuelle des opérations],
+    [Tests distribués automatiquement sur *plusieurs modèles de terminaux* pour garantir la compatibilité],
+    [Définition des *standards DevOps*, CI/CD et besoins infra en collaboration avec les équipes de développement],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
 )
@@ -41,10 +41,9 @@
   location: [Grenoble],
   contract-type: [CDD],
   description: list(
-    [Traitement batch sur *OpenStack souverain* réduit de *1 heure à 5 minutes*],
-    [*Pipelines de données conformes* pour recherche sensible, entièrement automatisés],
-    [Libération de *70%* de stockage via l'optimisation des données],
-    [*4 heures gagnées* par traitement en collaboration avec l'équipe de recherche],
+    [Conception d'une *infrastructure de traitement batch* pour le projet d'attaques par rayons X sur microcontrôleurs],
+    [Déploiement de l'application Python de traitement batch sur *infrastructure OpenStack*],
+    [Compression sur mesure des données d'analyse, libérant *70%* du stockage permanent],
   ),
   tags: ("OpenStack", "Python", "GitHub Actions", "Linux", "Automation"),
 )
@@ -54,11 +53,12 @@
   society: [Freelance (Hébergement & Infrastructure)],
   date: [Juin 2019 - Juil 2023],
   location: [Grenoble],
+  contract-type: [Freelance],
   description: list(
-    [*500+ VMs* gérées pour *plusieurs clients* sur infrastructure européenne avec *SLA 99.9%*],
-    [*Isolation des tenants*, segmentation réseau et séparation stricte des données],
-    [Des coûts infra réduits de *40%*, demandes support de *60%* via automatisation],
-    [Astreinte 24/7 pendant *4 ans*, gestion des incidents avec suivi des SLO],
+    [Infogérance de plus de *500* VMs pour plusieurs clients sur une *infrastructure européenne* avec un SLA de *99.9%*],
+    [*Isolation des tenants* via VLANs, firewalls, namespaces et stockage séparé par client],
+    [*Redimensionnement automatique* des workloads à chaud pour les clients SaaS (WordPress, GitLab, Drupal et plus)],
+    [Astreinte 24/7 pendant *4 ans* : incidents critiques, backups, contraintes sur-mesure et assistance technique],
   ),
   tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
 )

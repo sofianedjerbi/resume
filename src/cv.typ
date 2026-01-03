@@ -23,7 +23,7 @@
   last-name: (str) => text(font: header-font, size: 32pt, weight: "bold", str),
   title: (str) => text(size: 12pt, weight: "bold", fill: accent-color, str),
   info: (str) => text(size: header-info-font-size, fill: accent-color, str),
-  quote: (str) => text(size: 10pt, weight: "medium", style: "italic", fill: accent-color, str),
+  quote: (str) => text(size: 10pt, weight: "medium", style: "italic", fill: accent-color, eval(str, mode: "markup")),
 )
 
 /// Extract layout values with defaults
@@ -394,7 +394,7 @@
     #dates
   ],
   description: (str) => text(
-    size: 10pt,
+    size: 9pt,
     fill: _regular-colors.lightgray,
     {
       v(before-entry-description-skip)
