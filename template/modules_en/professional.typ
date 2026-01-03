@@ -5,7 +5,7 @@
 #cv-section("Experience")
 
 #cv-entry(
-  title: [Cloud Platform Architect],
+  title: [Lead Platform Engineer],
   society: [EDF (Energy)],
   date: [Nov 2024 - Present],
   location: [Bordeaux],
@@ -20,7 +20,7 @@
 )
 
 #cv-entry(
-  title: [CI/CD Platform Architect],
+  title: [Platform Engineer],
   society: [Ingenico (Payments)],
   date: [Aug 2023 - Sep 2024],
   location: [Valence],

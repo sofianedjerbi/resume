@@ -42,13 +42,13 @@ language = "en"
         location = "Switzerland"
 
 [lang.en]
-    header_title = "Cloud Platform Architect"
+    header_title = "Lead Platform Engineer"
     header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Relocating from France to Switzerland.\n*Looking for: Lead Platform Engineer roles.*"
     cv_footer = ""
     letter_footer = ""
 
 [lang.fr]
-    header_title = "Cloud Platform Architect"
+    header_title = "Lead Platform Engineer"
     header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Relocalisation de la France vers la Suisse.\n*Recherche : postes Lead Platform Engineer.*"
     cv_footer = ""
     letter_footer = ""
