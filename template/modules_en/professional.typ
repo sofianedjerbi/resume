@@ -11,7 +11,7 @@
   location: [Bordeaux],
   contract-type: [Contract],
   description: list(
-    [Designed and built a *cloud platform from scratch* for internal document management based on Nuxeo],
+    [Designed and built a *cloud platform from scratch* for document management based on Nuxeo],
     [*Full audit trail*, IAM/RBAC, environment isolation and SLOs],
     [*14* developers deploying autonomously across *5* environments + self-service ephemeral environments],
     [Built and trained a *platform team* in collaboration with dev, security and product teams],
