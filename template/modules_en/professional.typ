@@ -31,7 +31,7 @@
     [Tests automatically distributed across *multiple terminal models* to ensure compatibility],
     [Defined *DevOps standards*, CI/CD and infrastructure requirements with development teams],
   ),
-  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
+  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker", "DevSecOps"),
 )
 
 #cv-entry(

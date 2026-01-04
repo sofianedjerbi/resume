@@ -31,7 +31,7 @@
     [Tests distribués automatiquement sur *plusieurs modèles de terminaux* pour garantir la compatibilité],
     [Définition des *standards DevOps*, CI/CD et besoins infra en collaboration avec les équipes de développement],
   ),
-  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker"),
+  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker", "DevSecOps"),
 )
 
 #cv-entry(

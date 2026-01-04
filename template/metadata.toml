@@ -36,6 +36,7 @@ language = "en"
     last_name = "Djerbi"
 
     [personal.info]
+        phone = "+33 6 95 80 02 69"
         email = "contact@sofianedjerbi.com"
         linkedin = "sofianedjerbi"
         github = "sofianedjerbi"
