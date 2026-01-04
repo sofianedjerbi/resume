@@ -12,7 +12,7 @@
   contract-type: [Contract],
   description: list(
     [Designed and built a *cloud platform from scratch* for document management based on Nuxeo],
-    [*Full audit trail*, IAM/RBAC, environment isolation and SLOs],
+    [*Full audit trail*, IAM/RBAC, environment isolation and SLOs within budget constraints],
     [*14* developers deploying autonomously across *5* environments + self-service ephemeral environments],
     [Built and trained a *platform team* in collaboration with dev, security and product teams],
   ),

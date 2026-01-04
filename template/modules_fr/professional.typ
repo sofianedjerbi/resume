@@ -12,7 +12,7 @@
   contract-type: [Freelance],
   description: list(
     [Conception d'une *plateforme cloud from scratch* pour la nouvelle GED basée sur Nuxeo],
-    [Mise en place de *traçabilité complète*, IAM/RBAC, isolation des environnements et SLOs],
+    [Mise en place de *traçabilité complète*, IAM/RBAC, isolation des environnements et SLOs selon contraintes budgétaires],
     [Déploiement autonome pour *14* développeurs sur *5* environnements + environnements éphémères en self-service],
     [Constitution et formation d'une *équipe plateforme* avec les équipes dev, sécurité et métier],
   ),
