@@ -11,10 +11,15 @@
 
 #cv-skill(
   type: [Kubernetes],
-  info: [*CKA (Administrator)*, KCNA (Cloud Native Associate)],
+  info: [*CKA (Administrator)*, *CKAD (Application Developer)*, KCNA (Cloud Native Associate)],
 )
 
 #cv-skill(
   type: [HashiCorp],
   info: [*Terraform Associate*],
+)
+
+#cv-skill(
+  type: [Gruntwork],
+  info: [*Terragrunt Ambassador*],
 )

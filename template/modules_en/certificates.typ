@@ -11,7 +11,7 @@
 
 #cv-skill(
   type: [Kubernetes],
-  info: [*CKA (Administrator)*, KCNA (Cloud Native Associate)],
+  info: [*CKA (Administrator)*, *CKAD (Application Developer)*, KCNA (Cloud Native Associate)],
 )
 
 #cv-skill(
