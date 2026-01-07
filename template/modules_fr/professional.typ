@@ -20,7 +20,7 @@
 )
 
 #cv-entry(
-  title: [Senior DevSecOps Engineer],
+  title: [DevSecOps Engineer],
   society: [Ingenico (Paiement)],
   date: [Août 2023 - Sep 2024],
   location: [Valence],
