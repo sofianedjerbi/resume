@@ -5,7 +5,7 @@
 #cv-section("Expérience")
 
 #cv-entry(
-  title: [Lead Platform Engineer],
+  title: [Senior DevSecOps Engineer],
   society: [EDF (Énergie)],
   date: [Nov 2024 - Présent],
   location: [Bordeaux],
@@ -20,7 +20,7 @@
 )
 
 #cv-entry(
-  title: [Platform Engineer],
+  title: [Senior DevSecOps Engineer],
   society: [Ingenico (Paiement)],
   date: [Août 2023 - Sep 2024],
   location: [Valence],
@@ -35,7 +35,7 @@
 )
 
 #cv-entry(
-  title: [Infrastructure Engineer],
+  title: [DevOps Engineer],
   society: [CEA (Recherche nucléaire) x IM²AG],
   date: [Jan 2020 - Juin 2020],
   location: [Grenoble],
@@ -49,7 +49,7 @@
 )
 
 #cv-entry(
-  title: [Infrastructure Engineer],
+  title: [DevOps Engineer],
   society: [Freelance (Hébergement & Infrastructure)],
   date: [Juin 2019 - Juil 2023],
   location: [Grenoble],
