@@ -42,13 +42,13 @@ language = "en"
         location = "Lausanne, CH"
 
 [lang.en]
-    header_title = "Lead Platform Engineer"
-    header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Relocating from France to Switzerland.\n*Looking for: Lead Platform Engineer roles.*"
+    header_title = "Senior DevOps Engineer"
+    header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Relocating from France to Switzerland.\n*Looking for: Senior DevOps Engineer roles.*"
     cv_footer = ""
     letter_footer = ""
 
 [lang.fr]
-    header_title = "Lead Platform Engineer"
-    header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Relocalisation de la France vers la Suisse.\n*Recherche : postes Lead Platform Engineer.*"
+    header_title = "Senior DevOps Engineer"
+    header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Relocalisation de la France vers la Suisse.\n*Recherche : postes Senior DevOps Engineer.*"
     cv_footer = ""
     letter_footer = ""
