@@ -21,6 +21,9 @@ jobs:
         run: |
           mkdir -p ~/.local/share/fonts
           curl -L -o ~/.local/share/fonts/SpaceGrotesk.ttf "https://github.com/googlefonts/spacegrotesk/raw/main/fonts/ttf/SpaceGrotesk%5Bwght%5D.ttf"
+          # Font Awesome for icons
+          curl -L -o fa.zip "https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip"
+          unzip -j fa.zip "*/otfs/*.otf" -d ~/.local/share/fonts/
           fc-cache -fv
 
       - name: Compile CV
