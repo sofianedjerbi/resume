@@ -17,6 +17,13 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
 
+      - name: Install fonts
+        run: |
+          mkdir -p ~/.local/share/fonts
+          curl -sL "https://fonts.google.com/download?family=Space%20Grotesk" -o space-grotesk.zip
+          unzip -o space-grotesk.zip -d ~/.local/share/fonts/
+          fc-cache -fv
+
       - name: Compile CV
         run: typst compile --root . template/cv.typ cv.pdf
 
