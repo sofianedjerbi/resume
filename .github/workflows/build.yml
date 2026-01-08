@@ -17,23 +17,20 @@ jobs:
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
 
-      - name: Compile CV (EN)
-        run: typst compile --root . template/cv.typ cv_en.pdf
-
-      - name: Compile CV (FR)
-        run: typst compile --root . template/cv.typ cv_fr.pdf --input language=fr
+      - name: Compile CV
+        run: typst compile --root . template/cv.typ cv.pdf
 
       - name: Convert PDF to PNG
         run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils imagemagick
-          pdftoppm cv_en.pdf preview -png -singlefile -rx 150 -ry 150
+          pdftoppm cv.pdf preview -png -singlefile -rx 150 -ry 150
           mv preview.png cv_preview.png
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cv_en.pdf cv_fr.pdf cv_preview.png
-          git diff --staged --quiet || git commit -m "build: update CV PDFs and preview"
+          git add cv.pdf cv_preview.png
+          git diff --staged --quiet || git commit -m "build: update CV PDF and preview"
           git push
