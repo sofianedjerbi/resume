@@ -20,8 +20,9 @@ jobs:
       - name: Install fonts
         run: |
           mkdir -p ~/.local/share/fonts
-          curl -sL "https://fonts.google.com/download?family=Space%20Grotesk" -o space-grotesk.zip
-          unzip -o space-grotesk.zip -d ~/.local/share/fonts/
+          curl -sL "https://github.com/floriankarsten/space-grotesk/archive/refs/heads/main.zip" -o space-grotesk.zip
+          unzip -o space-grotesk.zip -d /tmp/
+          cp /tmp/space-grotesk-main/fonts/ttf/*.ttf ~/.local/share/fonts/
           fc-cache -fv
 
       - name: Compile CV
