@@ -10,32 +10,76 @@
 
 #let _latin-header-font = ("Roboto")
 
+// =============================================================================
+// GitHub Primer Light Theme
+// https://primer.style/foundations/color/overview/
+// =============================================================================
+#let theme = (
+  // Canvas (backgrounds)
+  canvas: (
+    default: rgb("#ffffff"),
+    subtle: rgb("#f6f8fa"),
+    inset: rgb("#f6f8fa"),
+  ),
+  // Foreground (text)
+  fg: (
+    default: rgb("#1F2328"),
+    muted: rgb("#656d76"),
+    subtle: rgb("#6e7781"),
+    on-emphasis: rgb("#ffffff"),
+  ),
+  // Border
+  border: (
+    default: rgb("#d0d7de"),
+    muted: rgb("#d8dee4"),
+    subtle: rgb("#eaeef2"),
+  ),
+  // Accent (primary actions, links)
+  accent: (
+    fg: rgb("#0969da"),
+    emphasis: rgb("#0969da"),
+    muted: rgb("#54aeff"),
+    subtle: rgb("#ddf4ff"),
+  ),
+  // Success
+  success: (
+    fg: rgb("#1a7f37"),
+    emphasis: rgb("#1f883d"),
+  ),
+  // Danger
+  danger: (
+    fg: rgb("#d1242f"),
+    emphasis: rgb("#cf222e"),
+  ),
+)
+
+// Legacy aliases for backward compatibility
 #let _awesome-colors = (
-  skyblue: rgb("#0395DE"),
-  red: rgb("#DC3522"),
-  nephritis: rgb("#27AE60"),
-  concrete: rgb("#95A5A6"),
-  darknight: rgb("#131A28"),
+  skyblue: theme.accent.fg,
+  red: theme.danger.fg,
+  nephritis: theme.success.fg,
+  concrete: theme.fg.muted,
+  darknight: theme.fg.default,
 )
 
 #let _regular-colors = (
-  subtlegray: rgb("#ededee"),
-  lightgray: rgb("#343a40"),
-  darkgray: rgb("#212529"),
+  subtlegray: theme.canvas.subtle,
+  lightgray: theme.fg.muted,
+  darkgray: theme.fg.default,
+  border: theme.border.default,
 )
 
-/// Set the accent color for the document
-/// 
-/// - awesome-colors (array): the awesome colors
-/// - metadata (array): the metadata object
+/// Get accent color from metadata or use theme default
 /// -> color
 #let _set-accent-color(awesome-colors, metadata) = {
-  let param = metadata.layout.awesome_color
-  return if param in awesome-colors {
-    awesome-colors.at(param)
-  } else {
-    rgb(param)
+  let param = metadata.layout.at("accent_color", default: none)
+  if param == none {
+    param = metadata.layout.at("awesome_color", default: none)
   }
+  if param == none {
+    return theme.accent.fg
+  }
+  return rgb(param)
 }
 
 /// Overwrite the default fonts if the metadata has custom font values
@@ -57,3 +101,6 @@
 
 // Backward compatibility aliases
 #let hBar = h-bar
+
+// Export theme for use in other modules
+#let get-theme() = theme

@@ -1,64 +1,86 @@
 // Imports
 #import "../../src/lib.typ": cv-section, cv-entry
+#import "../../src/utils/styles.typ": theme
 
 
 #cv-section("Experience")
 
 #cv-entry(
-  title: [Senior DevSecOps Engineer],
-  society: [EDF (Energy)],
+  title: [Senior DevOps Engineer],
+  society: [*EDF* (Energy)],
   date: [Nov 2024 - Present],
   location: [Bordeaux],
-  contract-type: [Contract],
+  contract-type: [Freelance],
+  logo: image("../assets/edf_square.svg"),
+  summary: [Multi-account AWS platform replacing legacy document system],
   description: list(
-    [Designed and built a *cloud platform from scratch* for document management based on Nuxeo],
-    [*Full audit trail*, IAM/RBAC, environment isolation and SLOs within budget constraints],
-    [*14* developers deploying autonomously across *5* environments + self-service ephemeral environments],
-    [Built and trained a *platform team* in collaboration with dev, security and product teams],
+    [Defined target architecture and migration strategy across *5* isolated environments],
+    [Enabled *15* engineers to deploy independently through *self-service* workflows],
+    [Established platform standards for security, SLOs and cost control],
+    [Built and coached a core team of *5* engineers to own platform operations],
   ),
   tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
 )
 
 #cv-entry(
-  title: [DevSecOps Engineer],
-  society: [Ingenico (Payments)],
+  title: [DevOps Engineer],
+  society: [*Ingenico* (Payments)],
   date: [Aug 2023 - Sep 2024],
   location: [Valence],
-  contract-type: [Contract],
+  contract-type: [Freelance],
+  logo: image("../assets/ingenico.svg"),
+  summary: [Shared CI/CD platform for payment terminal libraries teams],
   description: list(
-    [Designed a standardized *Java/Kotlin CI/CD platform*, from build to deploy, with integrated security],
-    [*Dozens of releases* per day shipped by teams without manual ops intervention],
-    [Tests automatically distributed across *multiple terminal models* to ensure compatibility],
-    [Defined *DevOps standards*, CI/CD and infrastructure requirements with development teams],
+    [Designed shared delivery pipelines used by *7* library teams],
+    [Integrated *device-farm* testing, quality gates and automated releases],
+    [Supported teams through the transition from independent pipelines to shared platform],
   ),
   tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker", "DevSecOps"),
 )
 
 #cv-entry(
   title: [DevOps Engineer],
-  society: [Freelance (Hosting & Infrastructure)],
+  society: [*Hosting Platform* (IT)],
   date: [Jun 2019 - Jul 2023],
   location: [Grenoble],
-  contract-type: [Freelance],
+  contract-type: [Independent],
+  logo: image("../assets/hosting_platform.png"),
+  logo-zoom: 120%,
+  summary: [Multi-host virtualization hosting platform],
   description: list(
-    [*500+* VMs managed for multiple clients on *European infrastructure*, *99.9%* SLA],
-    [*Tenant isolation* via VLANs, firewalls, namespaces and per-client storage],
-    [*Automatic hot-resizing* of workloads for SaaS clients (WordPress, GitLab, Drupal and more)],
-    [24/7 on-call for *4 years*: critical incidents, backups, custom constraints and technical support],
+    [Operated multi-host virtualization (*500+* VMs, *99.9%* SLA), *24/7* ownership],
+    [Implemented tenant isolation using VLANs, firewalls and dedicated storage],
+    [Built *self-service* provisioning/autoscaling and packaged reusable ops templates],
   ),
   tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
 )
 
-#cv-entry(
-  title: [DevOps Engineer],
-  society: [CEA (Nuclear Research) x IM²AG],
-  date: [Jan 2020 - Jun 2020],
-  location: [Grenoble],
-  contract-type: [Fixed term],
-  description: list(
-    [Designed *batch processing infrastructure* for X-ray attacks on microcontrollers research project],
-    [Deployed Python batch processing application on *OpenStack infrastructure*],
-    [Custom compression of analysis data, freeing *70%* of permanent storage],
-  ),
-  tags: ("OpenStack", "Python", "GitHub Actions", "Linux", "Automation"),
+// Mini entry - "And more on LinkedIn"
+#v(4pt)
+#table(
+  columns: (12%, 1fr),
+  inset: 0pt,
+  stroke: none,
+  gutter: 12pt,
+  align: (x, y) => left + horizon,
+  // Stacked logos (round, no border)
+  {
+    let s = 22pt
+    let gap = 12pt
+    box(width: s + 2 * gap, height: s, {
+      place(dx: 2 * gap, box(width: s, height: s, radius: 50%, clip: true,
+        image("../assets/logo2.png", width: 100%, height: 100%, fit: "cover")))
+      place(dx: gap, box(width: s, height: s, radius: 50%, clip: true,
+        image("../assets/logo1.png", width: 100%, height: 100%, fit: "cover")))
+      place(dx: 0pt, box(width: s, height: s, radius: 50%, clip: true,
+        image("../assets/cea.png", width: 100%, height: 100%, fit: "cover")))
+    })
+  },
+  // Title and subtitle (vertically centered)
+  {
+    text(size: 10pt, weight: "bold")[Additional Consulting]
+    linebreak()
+    text(size: 9pt, fill: theme.fg.subtle, weight: "medium", style: "italic")[Selected items on #link("https://www.linkedin.com/in/sofianedjerbi")[#text(fill: theme.accent.fg)[LinkedIn]] · Details available upon request.]
+  },
 )
+

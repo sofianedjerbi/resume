@@ -2,7 +2,7 @@
 * Functions for the CV template
 */
 
-#import "./utils/styles.typ": _set-accent-color, _awesome-colors
+#import "./utils/styles.typ": _set-accent-color, _awesome-colors, theme
 
 #let _letter-header(
   sender-address: "Your Address Here",
@@ -32,7 +32,7 @@
     text(fill: accent-color, weight: "bold", str)
   }
   let letter-header-address-style(str) = {
-    text(fill: gray, size: 0.9em, smallcaps(str))
+    text(fill: theme.fg.subtle, size: 0.9em, smallcaps(str))
   }
   let letter-date-style(str) = {
     text(size: 0.9em, style: "italic", str)
@@ -74,7 +74,7 @@
 
   // Styles
   let footer-style(str) = {
-    text(size: 8pt, fill: rgb("#999999"), smallcaps(str))
+    text(size: 8pt, fill: theme.fg.subtle, smallcaps(str))
   }
 
   table(

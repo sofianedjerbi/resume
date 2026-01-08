@@ -24,7 +24,5 @@
 
 #import-modules((
   "professional",
-  "skills",
   "certificates",
-  "education",
 ))

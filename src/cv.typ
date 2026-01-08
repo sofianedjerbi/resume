@@ -4,7 +4,7 @@
 
 #import "@preview/fontawesome:0.6.0": *
 #import "./utils/injection.typ": _inject
-#import "./utils/styles.typ": _latin-font-list, _latin-header-font, _awesome-colors, _regular-colors, _set-accent-color, h-bar
+#import "./utils/styles.typ": _latin-font-list, _latin-header-font, _awesome-colors, _regular-colors, _set-accent-color, h-bar, theme
 #import "./utils/lang.typ": _is-non-latin, _default-date-width
 
 /// Metadata state to avoid passing metadata to every function
@@ -239,7 +239,7 @@
 
   // Styles
   let footer-style(str) = {
-    text(size: 8pt, fill: rgb("#999999"), smallcaps(str))
+    text(size: 8pt, fill: theme.fg.subtle, smallcaps(str))
   }
 
   if display-page-counter {
@@ -295,12 +295,13 @@
   
   let lang = metadata.language
   let non-latin = _is-non-latin(lang)
-  let before-section-skip = _get-layout-value(metadata, "before_section_skip", 1pt)
+  let before-section-skip = _get-layout-value(metadata, "before_section_skip", "1pt")
+  let after-section-skip = _get-layout-value(metadata, "after_section_skip", "8pt")
   let accent-color = _set-accent-color(awesome-colors, metadata)
   let highlighted-text = title.slice(0, letters)
   let normal-text = title.slice(letters)
 
-  let section-title-style(str, color: black) = {
+  let section-title-style(str, color: theme.fg.default) = {
     text(size: 16pt, weight: "bold", fill: color, str)
   }
 
@@ -308,10 +309,11 @@
   if non-latin {
     section-title-style(title, color: accent-color)
   } else {
-    section-title-style(title, color: black)
+    section-title-style(title, color: theme.fg.default)
   }
   h(2pt)
-  box(width: 1fr, line(stroke: 0.9pt, length: 100%))
+  box(width: 1fr, line(stroke: 0.9pt + theme.border.default, length: 100%))
+  v(after-section-skip)
 }
 
 /// Prepare common entry parameters
@@ -325,7 +327,7 @@
   }
 
   let accent-color = _set-accent-color(awesome-colors, metadata)
-  let before-entry-skip = eval(metadata.layout.at("before_entry_skip", default: 1pt))
+  let before-entry-skip = eval(metadata.layout.at("before_entry_skip", default: 10pt))
   let before-entry-description-skip = eval(
     metadata.layout.at("before_entry_description_skip", default: 1pt),
   )
@@ -358,18 +360,20 @@
   
   // Common parameter calculations
   let accent-color = _set-accent-color(awesome-colors, metadata)
-  let before-entry-skip = eval(metadata.layout.at("before_entry_skip", default: 1pt))
-  let before-entry-description-skip = eval(metadata.layout.at("before_entry_description_skip", default: 1pt))
+  let before-entry-skip = eval(metadata.layout.at("before_entry_skip", default: "10pt"))
+  let after-entry-skip = eval(metadata.layout.at("after_entry_skip", default: "10pt"))
+  let before-entry-description-skip = eval(metadata.layout.at("before_entry_description_skip", default: "1pt"))
   let date-width = metadata.layout.at("date_width", default: none)
   let date-width = if date-width == none {
     _default-date-width(metadata.language)
   } else {
     eval(date-width)
   }
-  
+
   return (
     accent-color: accent-color,
     before-entry-skip: before-entry-skip,
+    after-entry-skip: after-entry-skip,
     before-entry-description-skip: before-entry-description-skip,
     date-width: date-width,
     awesome-colors: awesome-colors,
@@ -382,8 +386,8 @@
   a1: (str) => text(size: 12pt, weight: "bold", str),
   a2: (str) => align(right, text(weight: "medium", fill: accent-color, style: "oblique", str)),
   b1: (str) => text(size: 10pt, fill: accent-color, weight: "medium", smallcaps(str)),
-  b2: (str) => align(right, text(size: 10pt, weight: "medium", fill: gray, style: "oblique", str)),
-  contract-type: (str) => text(size: 9pt, weight: "regular", fill: gray, [ · #str]),
+  b2: (str) => align(right, text(size: 9pt, weight: "medium", fill: theme.fg.subtle, style: "oblique", str)),
+  contract-type: (str) => text(size: 9pt, weight: "regular", fill: theme.fg.subtle, [ · #str]),
   dates: (dates) => [
     #set list(marker: [])
     #dates
@@ -393,6 +397,16 @@
     fill: _regular-colors.lightgray,
     {
       v(before-entry-description-skip)
+      str
+    },
+  ),
+  summary: (str) => text(
+    size: 9pt,
+    fill: _regular-colors.darkgray,
+    weight: "medium",
+    {
+      fa-briefcase()
+      h(4pt)
       str
     },
   ),
@@ -542,8 +556,10 @@
   society: none,
   date: none,
   location: none,
+  summary: none,
   description: none,
   logo: "",
+  logo-zoom: 100%,
   tags: (),
   contract-type: none,
   metadata: metadata,
@@ -551,6 +567,7 @@
   // Extract parameters
   let accent-color = params.accent-color
   let before-entry-skip = params.before-entry-skip
+  let after-entry-skip = params.after-entry-skip
   let before-entry-description-skip = params.before-entry-description-skip
   let date-width = params.date-width
 
@@ -564,22 +581,50 @@
   v(before-entry-skip)
 
   if entry-type == "full" {
-    // Full entry layout (original cv-entry logic)
+    // Full entry layout with logo and summary in header
+    let logo-col-width = if display-logo and logo != "" { if summary != none { 11% } else { 8% } } else { 0% }
     table(
-      columns: (1fr, date-width),
+      columns: (logo-col-width, 1fr),
       inset: 0pt,
       stroke: 0pt,
-      gutter: 6pt,
-      align: (x, y) => if x == 1 { right } else { auto },
-      table(
-          columns: (if display-logo and logo != "" { 4% } else { 0% }, 1fr),
+      gutter: 8pt,
+      align: (x, y) => if x == 0 { top } else { auto },
+      if logo == "" [] else {
+        // Soft shadow effect with square container
+        let logo-size = if summary != none { 40pt } else { 28pt }
+        v(-2pt)
+        box(width: logo-size, height: logo-size, {
+          // Layered shadow for soft blur effect
+          place(dx: 0.5pt, dy: 0.5pt, box(width: logo-size, height: logo-size, radius: 6pt, fill: theme.border.subtle.transparentize(70%)))
+          place(dx: 1pt, dy: 1pt, box(width: logo-size, height: logo-size, radius: 6pt, fill: theme.border.subtle.transparentize(70%)))
+          place(dx: 1.5pt, dy: 1.5pt, box(width: logo-size, height: logo-size, radius: 6pt, fill: theme.border.subtle.transparentize(70%)))
+          place(dx: 2pt, dy: 2pt, box(width: logo-size, height: logo-size, radius: 6pt, fill: theme.border.subtle.transparentize(80%)))
+          box(
+            width: logo-size,
+            height: logo-size,
+            radius: 6pt,
+            fill: theme.canvas.default,
+            clip: true,
+            align(center + horizon, {
+              set image(width: logo-zoom, height: logo-zoom, fit: if logo-zoom > 100% { "cover" } else { "contain" })
+              logo
+            })
+          )
+        })
+      },
+      {
+        // Inner table for title/company + date/location
+        table(
+          columns: (1fr, date-width),
           inset: 0pt,
           stroke: 0pt,
-          align: horizon,
-          column-gutter: if display-logo and logo != "" { 4pt } else { 0pt },
-          if logo == "" [] else {
-            set image(width: 100%)
-            logo
+          gutter: 6pt,
+          align: (x, y) => if x == 1 { right } else { auto },
+          {
+            (styles.a1)(if society-first-setting { society } else { title })
+            if contract-type != none { (styles.contract-type)(contract-type) }
+            linebreak()
+            (styles.b1)(if society-first-setting { title } else { society })
           },
           table(
             columns: auto,
@@ -587,28 +632,21 @@
             stroke: 0pt,
             row-gutter: 6pt,
             align: auto,
-            {
-              (styles.a1)(if society-first-setting { society } else { title })
-              if contract-type != none { (styles.contract-type)(contract-type) }
-            },
-            {
-              (styles.b1)(if society-first-setting { title } else { society })
-            },
+            (styles.a2)(if society-first-setting { location } else { (styles.dates)(date) }),
+            (styles.b2)(if society-first-setting { (styles.dates)(date) } else { location }),
           ),
-        ),
-      table(
-        columns: auto,
-        inset: 0pt,
-        stroke: 0pt,
-        row-gutter: 6pt,
-        align: auto,
-        (styles.a2)(if society-first-setting { location } else { (styles.dates)(date) }),
-        (styles.b2)(if society-first-setting { (styles.dates)(date) } else { location }),
-      ),
+        )
+        // Summary below title/company, can extend full width
+        if summary != none {
+          v(-6pt)
+          (styles.summary)(summary)
+        }
+      },
     )
-    (styles.description)(description)
+    if description != none { (styles.description)(description) }
     _create-entry-tag-list(tags, styles.tag)
-    
+    v(after-entry-skip)
+
   } else if entry-type == "start" {
     // Entry start layout (original cv-entry-start logic)
     table(
@@ -650,6 +688,7 @@
         )
       (styles.description)(description)
       _create-entry-tag-list(tags, styles.tag)
+      v(after-entry-skip)
     } else {
       table(
         columns: (1fr, date-width),
@@ -664,6 +703,7 @@
         (styles.b2)((styles.dates)(date)),
         )
       _create-entry-tag-list(tags, styles.tag)
+      v(after-entry-skip)
     }
   }
 }
@@ -688,8 +728,10 @@
   society: "Society",
   date: "Date",
   location: "Location",
-  description: "Description",
+  summary: none,
+  description: none,
   logo: "",
+  logo-zoom: 100%,
   tags: (),
   contract-type: none,
   metadata: none,
@@ -708,8 +750,10 @@
     society: society,
     date: date,
     location: location,
+    summary: summary,
     description: description,
     logo: logo,
+    logo-zoom: logo-zoom,
     tags: tags,
     contract-type: contract-type,
     metadata: metadata,
@@ -755,7 +799,7 @@
 #let cv-entry-continued(
   title: "Title",
   date: "Date",
-  description: "Description",
+  description: none,
   tags: (),
   metadata: none,
   // New parameter names (recommended)
@@ -786,8 +830,9 @@
 ///
 /// - type (str): The type of the skill. It is displayed on the left side.
 /// - info (str | content): The information about the skill. It is displayed on the right side. Items can be separated by `#hbar()`.
+/// - icon (image): Optional icon to display before the type.
 /// -> content
-#let cv-skill(type: "Type", info: "Info") = {
+#let cv-skill(type: "Type", info: "Info", icon: none) = {
   let skill-type-style(str) = {
     align(right, text(size: 10pt, weight: "bold", str))
   }
@@ -795,13 +840,30 @@
     text(str)
   }
 
-  table(
-    columns: (17%, 1fr),
-    inset: 0pt,
-    column-gutter: 10pt,
-    stroke: none,
-    skill-type-style(type), skill-info-style(info),
-  )
+  if icon != none {
+    table(
+      columns: (18pt, auto, 1fr),
+      inset: 0pt,
+      column-gutter: 8pt,
+      stroke: none,
+      align: (x, y) => if x == 0 { center + horizon } else if x == 1 { left + horizon } else { left + horizon },
+      box(width: 18pt, height: 18pt, {
+        set image(width: 100%, height: 100%, fit: "contain")
+        icon
+      }),
+      skill-type-style(type),
+      skill-info-style(info),
+    )
+  } else {
+    table(
+      columns: (17%, 1fr),
+      inset: 0pt,
+      column-gutter: 10pt,
+      stroke: none,
+      skill-type-style(type),
+      skill-info-style(info),
+    )
+  }
   v(-6pt)
 }
 

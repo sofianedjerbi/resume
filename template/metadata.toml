@@ -3,7 +3,8 @@
 language = "en"
 
 [layout]
-    awesome_color = "#3670a0"
+    # Theme: GitHub Primer Light (configured in src/utils/styles.typ)
+    accent_color = "#0969da"  # GitHub blue
     before_section_skip = "6pt"
     before_entry_skip = "1pt"
     before_entry_description_skip = "0pt"
@@ -20,7 +21,7 @@ language = "en"
 
     [layout.entry]
         display_entry_society_first = false
-        display_logo = false
+        display_logo = true
 
     [layout.footer]
         display_page_counter = false
@@ -28,7 +29,7 @@ language = "en"
 
 [inject]
     inject_ai_prompt = false
-    inject_keywords = true
+    inject_keywords = false
     injected_keywords_list = ["Cloud Platform Architect", "Solutions Architect", "Platform Engineering", "Internal Developer Platform", "Self-Service Platform", "Cloud Architect", "DevOps", "DevSecOps", "SRE", "FinOps", "Infrastructure as Code", "GitOps", "CI/CD", "Automation", "Observability", "Cost Optimization", "Reliability Engineering", "Agile", "Scrum", "Jira", "Confluence", "Linux", "Bash", "Python", "Go", "Rust", "TypeScript", "AWS", "Azure", "GCP", "Azure DevOps", "Kubernetes", "Docker", "Helm", "ArgoCD", "FluxCD", "Terraform", "Terragrunt", "Ansible", "GitHub", "GitHub Actions", "GitLab", "GitLab CI", "Jenkins", "Prometheus", "Grafana", "Datadog", "ELK", "PostgreSQL", "Postgres", "MySQL", "Redis", "MongoDB", "Proxmox", "Hetzner", "OpenStack", "Multi-Cloud", "IAM", "RBAC", "Landing Zone", "Compliance", "Security by Design", "Zero Trust", "Audit", "Governance", "Secrets Management", "Vault"]
 
 [personal]
@@ -39,11 +40,13 @@ language = "en"
         phone = "+33 6 95 80 02 69"
         email = "contact@sofianedjerbi.com"
         linkedin = "sofianedjerbi"
+        github = "sofianedjerbi"
+        homepage = "sofianedjerbi.com"
         location = "Lausanne, CH"
 
 [lang.en]
     header_title = "Senior DevOps Engineer"
-    header_quote = "6 years building platforms with teams that own them.\nTerragrunt Ambassador. Relocating from France to Switzerland.\n*Looking for: Senior DevOps Engineer roles.*"
+    header_quote = "6 years building cloud platforms with teams that own them.\nTerragrunt Ambassador. Relocating to Switzerland. Work authorization: EU/EFTA.\n*Available for Senior DevOps Engineer roles. (Platform Engineering / Architecture)*"
     cv_footer = ""
     letter_footer = ""
 
@@ -52,3 +55,41 @@ language = "en"
     header_quote = "6 ans de plateformes construites avec et pour les équipes.\nTerragrunt Ambassador. Relocalisation de la France vers la Suisse.\n*Recherche : postes Senior DevOps Engineer.*"
     cv_footer = ""
     letter_footer = ""
+
+[[sidebar_skills]]
+    category = "Cloud & IaC"
+    items = ["AWS", "Azure", "Terraform", "Terragrunt"]
+
+[[sidebar_skills]]
+    category = "Containers"
+    items = ["Kubernetes", "Helm", "Docker", "Argo CD"]
+
+[[sidebar_skills]]
+    category = "CI/CD"
+    items = ["GitLab CI", "GitHub Actions", "Jenkins"]
+
+[[sidebar_skills]]
+    category = "Observability"
+    items = ["Prometheus", "Grafana", "Loki", "OpenTelemetry"]
+
+[[sidebar_skills]]
+    category = "OS & Code"
+    items = ["Linux", "Bash", "Python", "Go"]
+
+[languages]
+    french = "Native"
+    english = "C1"
+
+[highlights]
+    items = [
+        "Platform design",
+        "Security by design",
+        "GitOps @ scale",
+        "Team builder",
+    ]
+
+[[education]]
+    title = "BSc Mathematics & Computer Science"
+    school = "Université Grenoble Alpes"
+    location = "France"
+    logo = "univ_grenoble.png"
