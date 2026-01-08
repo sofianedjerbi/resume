@@ -31,7 +31,7 @@ jobs:
           fc-cache -fv
 
       - name: Compile CV
-        run: typst compile --root . template/cv.typ cv.pdf
+        run: typst fonts && typst compile --font-path ~/.local/share/fonts --root . template/cv.typ cv.pdf
 
       - name: Convert PDF to PNG
         run: |
