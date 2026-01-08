@@ -20,7 +20,7 @@ jobs:
       - name: Install Font Awesome
         run: |
           mkdir -p fonts/fa
-          curl -L -o fa.zip "https://use.fontawesome.com/releases/v6.7.2/fontawesome-free-6.7.2-desktop.zip"
+          curl -L -o fa.zip "https://use.fontawesome.com/releases/v7.0.0/fontawesome-free-7.0.0-desktop.zip"
           unzip -j fa.zip "*/otfs/*.otf" -d fonts/fa/
 
       - name: Compile CV
