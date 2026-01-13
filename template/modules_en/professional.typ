@@ -19,7 +19,7 @@
     [Established platform standards for security, SLOs and cost control],
     [Built and coached a core team of *5* engineers to own platform operations],
   ),
-  tags: ("AWS", "Terraform", "Terragrunt", "GitOps", "DevSecOps"),
+  tags: ("AWS", "Terraform", "Terragrunt", "GitLab CI", "GitOps", "DevSecOps"),
 )
 
 #cv-entry(
