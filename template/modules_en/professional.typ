@@ -55,4 +55,22 @@
   tags: ("Linux", "KVM", "Proxmox", "DNS", "Automation", "On-call"),
 )
 
-
+// Mini entry - etcd.me project
+#v(4pt)
+#table(
+  columns: (12%, 1fr),
+  inset: 0pt,
+  stroke: none,
+  gutter: 12pt,
+  align: (x, y) => left + horizon,
+  {
+    let s = 22pt
+    box(width: s, height: s, radius: 50%, clip: true,
+      image("../assets/kubernetes.png", width: 100%, height: 100%, fit: "cover"))
+  },
+  {
+    text(size: 10pt, weight: "bold")[etcd.me]
+    linebreak()
+    text(size: 9pt, fill: theme.fg.subtle, weight: "medium", style: "italic")[HA Kubernetes on Talos Linux · Vault PKI · Cilium · #link("https://etcd.me")[#text(fill: theme.accent.fg)[etcd.me]]]
+  },
+)
