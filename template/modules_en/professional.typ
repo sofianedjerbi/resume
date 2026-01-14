@@ -39,20 +39,19 @@
 )
 
 #cv-entry(
-  title: [DevOps Engineer],
-  society: [*Hosting Platform* (IT)],
-  date: [Jun 2019 - Jul 2023],
-  location: [Grenoble],
-  contract-type: [Independent],
-  logo: image("../assets/hosting_platform.png"),
-  logo-zoom: 120%,
-  summary: [Multi-host virtualization hosting platform],
+  title: [Personal Project],
+  society: [*etcd.me* (Infrastructure)],
+  date: [2024 - Present],
+  location: [Open Source],
+  contract-type: [],
+  logo: image("../assets/kubernetes.png"),
+  summary: [High-availability Kubernetes cluster with GitOps and self-healing],
   description: list(
-    [Operated multi-host virtualization (*500+* VMs, *99.9%* SLA), *24/7* ownership],
-    [Implemented tenant isolation using VLANs, firewalls and dedicated storage],
-    [Built *self-service* provisioning/autoscaling and packaged reusable ops templates],
+    [Built *3-node* HA cluster on Talos Linux with automated failover and *99.9%* uptime],
+    [Implemented GitOps with ArgoCD, SOPS secrets, and Cilium networking],
+    [Self-hosted services: Keycloak SSO, Grafana/Loki observability, n8n automation],
   ),
-  tags: ("AWS", "Linux", "Proxmox", "Hetzner", "Kubernetes", "SRE", "Ansible"),
+  tags: ("Kubernetes", "Talos", "ArgoCD", "Cilium", "OpenTofu", "Hetzner"),
 )
 
 // Mini entry - "And more on LinkedIn"

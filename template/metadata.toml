@@ -45,8 +45,8 @@ language = "en"
         location = "Lausanne, CH"
 
 [lang.en]
-    header_title = "Senior DevOps Engineer"
-    header_quote = "6 years building cloud platforms with teams that own them.\nTerragrunt Ambassador. Relocating to Switzerland. Work authorization: EU/EFTA.\n*Available for Senior DevOps Engineer roles. (Platform Engineering / Architecture)*"
+    header_title = "Site Reliability Engineer"
+    header_quote = "6 years building reliable platforms with teams that own them.\nTerragrunt Ambassador. Relocating to Switzerland. Work authorization: EU/EFTA.\n*Available for SRE / Platform Reliability roles.*"
     cv_footer = ""
     letter_footer = ""
 
@@ -82,10 +82,10 @@ language = "en"
 
 [highlights]
     items = [
-        "Platform design",
-        "Security by design",
+        "SLOs & reliability",
+        "Self-service DX",
         "GitOps @ scale",
-        "Team builder",
+        "On-call ownership",
     ]
 
 [[education]]
