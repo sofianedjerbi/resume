@@ -39,19 +39,20 @@
 )
 
 #cv-entry(
-  title: [Founder & SRE],
-  society: [*etcd.me* (Infrastructure)],
-  date: [Project],
-  location: [Open Source],
-  contract-type: [],
-  logo: image("../assets/kubernetes.png"),
-  summary: [HA Kubernetes on Linux with PKI, secrets management and GitOps],
+  title: [Site Reliability Engineer],
+  society: [*Hosting Platform* (Cloud)],
+  date: [Jun 2019 - Jul 2023],
+  location: [Grenoble],
+  contract-type: [Freelance while student],
+  logo: image("../assets/hosting_platform.png"),
+  logo-zoom: 120%,
+  summary: [Large-scale Linux hosting with KVM virtualization and 24/7 on-call],
   description: list(
-    [Built *3-node* HA cluster on Talos Linux with *KVM*, automated failover and *99.9%* uptime],
-    [Implemented *Vault* for PKI/secrets, Cilium for networking and service mesh],
-    [Self-hosted DNS, Keycloak SSO, Prometheus/Grafana observability stack],
+    [Operated *500+ VMs* on *KVM/Proxmox* across multiple hosts with *99.9%* SLA],
+    [Built automation for provisioning, DNS management and *self-service* customer workflows],
+    [*4 years of 24/7 on-call* ownership with incident response and post-mortems],
   ),
-  tags: ("Kubernetes", "Linux", "Vault", "KVM", "Go", "Hetzner"),
+  tags: ("Linux", "KVM", "Proxmox", "DNS", "Automation", "On-call"),
 )
 
 
