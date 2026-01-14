@@ -58,10 +58,10 @@
 // Mini entry - etcd.me project
 #v(4pt)
 #table(
-  columns: (12%, 1fr),
+  columns: (auto, 1fr),
   inset: 0pt,
   stroke: none,
-  gutter: 12pt,
+  gutter: 8pt,
   align: (x, y) => left + horizon,
   {
     let s = 22pt
