@@ -54,32 +54,4 @@
   tags: ("Kubernetes", "Talos", "ArgoCD", "Cilium", "OpenTofu", "Hetzner"),
 )
 
-// Mini entry - "And more on LinkedIn"
-#v(4pt)
-#table(
-  columns: (12%, 1fr),
-  inset: 0pt,
-  stroke: none,
-  gutter: 12pt,
-  align: (x, y) => left + horizon,
-  // Stacked logos (round, no border)
-  {
-    let s = 22pt
-    let gap = 12pt
-    box(width: s + 2 * gap, height: s, {
-      place(dx: 2 * gap, box(width: s, height: s, radius: 50%, clip: true,
-        image("../assets/logo2.png", width: 100%, height: 100%, fit: "cover")))
-      place(dx: gap, box(width: s, height: s, radius: 50%, clip: true,
-        image("../assets/logo1.png", width: 100%, height: 100%, fit: "cover")))
-      place(dx: 0pt, box(width: s, height: s, radius: 50%, clip: true,
-        image("../assets/cea.png", width: 100%, height: 100%, fit: "cover")))
-    })
-  },
-  // Title and subtitle (vertically centered)
-  {
-    text(size: 10pt, weight: "bold")[Additional Consulting]
-    linebreak()
-    text(size: 9pt, fill: theme.fg.subtle, weight: "medium", style: "italic")[Selected items on #link("https://www.linkedin.com/in/sofianedjerbi")[#text(fill: theme.accent.fg)[LinkedIn]] · Details available upon request.]
-  },
-)
 
