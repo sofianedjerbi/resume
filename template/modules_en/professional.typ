@@ -39,7 +39,7 @@
 )
 
 #cv-entry(
-  title: [Personal Project],
+  title: [Founder & SRE],
   society: [*etcd.me* (Infrastructure)],
   date: [2024 - Present],
   location: [Open Source],

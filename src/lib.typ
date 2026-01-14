@@ -300,10 +300,11 @@
       inset: (x: 20pt, y: 20pt),
       {
         // Title header
+        let header-title = metadata.lang.at(metadata.language).at("header_title", default: "Senior DevOps Engineer")
         stack(
           dir: ttb,
           spacing: 12pt,
-          align(center, text(font: header-font, size: 24pt, weight: "bold", fill: theme.fg.default)[Senior DevOps Engineer]),
+          align(center, text(font: header-font, size: 24pt, weight: "bold", fill: theme.fg.default)[#header-title]),
           align(center, text(size: 13pt, fill: theme.fg.subtle)[AWS · Azure · Kubernetes · Terraform]),
         )
 
