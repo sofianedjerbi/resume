@@ -6,7 +6,7 @@
 #cv-section("Experience")
 
 #cv-entry(
-  title: [Senior DevOps Engineer],
+  title: [Site Reliability Engineer],
   society: [*EDF* (Energy)],
   date: [Nov 2024 - Present],
   location: [Bordeaux],
@@ -23,7 +23,7 @@
 )
 
 #cv-entry(
-  title: [DevOps Engineer],
+  title: [Site Reliability Engineer],
   society: [*Ingenico* (Payments)],
   date: [Aug 2023 - Sep 2024],
   location: [Valence],
