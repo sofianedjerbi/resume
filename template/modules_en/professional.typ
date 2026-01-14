@@ -14,7 +14,7 @@
   logo: image("../assets/edf_square.svg"),
   summary: [Linux-based cloud platform with secrets management and self-service DX],
   description: list(
-    [Designed platform architecture with secrets management and security policies across *5* environments],
+    [Designed platform architecture with secrets management across *5* isolated environments],
     [Built *self-service* pipelines enabling *15* engineers to deploy autonomously],
     [Established SLOs, monitoring and *on-call* processes for platform reliability],
     [Coached a core team of *5* engineers on platform operations and incident response],
