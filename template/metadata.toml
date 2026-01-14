@@ -70,11 +70,11 @@ language = "en"
 
 [[sidebar_skills]]
     category = "Observability"
-    items = ["Prometheus", "Grafana", "Loki", "OpenTelemetry"]
+    items = ["Prometheus", "Grafana", "Loki", "Vault"]
 
 [[sidebar_skills]]
-    category = "OS & Code"
-    items = ["Linux", "Bash", "Python", "Go"]
+    category = "Code & OS"
+    items = ["Go", "Python", "Bash", "Linux"]
 
 [languages]
     french = "Native"

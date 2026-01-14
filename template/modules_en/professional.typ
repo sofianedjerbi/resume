@@ -12,14 +12,14 @@
   location: [Bordeaux],
   contract-type: [Freelance],
   logo: image("../assets/edf_square.svg"),
-  summary: [Multi-account AWS platform replacing legacy document system],
+  summary: [Linux-based cloud platform with secrets management and self-service DX],
   description: list(
-    [Defined target architecture and migration strategy across *5* isolated environments],
-    [Enabled *15* engineers to deploy independently through *self-service* workflows],
-    [Established platform standards for security, SLOs and cost control],
-    [Built and coached a core team of *5* engineers to own platform operations],
+    [Designed platform architecture with *Vault* for secrets and security policies across *5* environments],
+    [Built *self-service* pipelines enabling *15* engineers to deploy autonomously],
+    [Established SLOs, monitoring and *on-call* processes for platform reliability],
+    [Coached a core team of *5* engineers on platform operations and incident response],
   ),
-  tags: ("AWS", "Terraform", "Terragrunt", "GitLab CI", "GitOps", "DevSecOps"),
+  tags: ("Linux", "Vault", "Terraform", "GitLab CI", "Go", "Automation"),
 )
 
 #cv-entry(
@@ -29,13 +29,13 @@
   location: [Valence],
   contract-type: [Freelance],
   logo: image("../assets/ingenico.svg"),
-  summary: [Shared CI/CD platform for payment terminal libraries teams],
+  summary: [Shared platform tooling and automation for payment terminal teams],
   description: list(
-    [Designed shared delivery pipelines used by *7* library teams],
-    [Integrated *device-farm* testing, quality gates and automated releases],
-    [Supported teams through the transition from independent pipelines to shared platform],
+    [Designed shared delivery pipelines and orchestration for *7* library teams],
+    [Built internal tooling in *Go* for automation and developer experience],
+    [Implemented *Kubernetes* workloads with security gates and automated releases],
   ),
-  tags: ("Kubernetes", "Azure", "GitOps", "CI/CD", "Docker", "DevSecOps"),
+  tags: ("Kubernetes", "Go", "Linux", "CI/CD", "Docker", "Automation"),
 )
 
 #cv-entry(
@@ -45,13 +45,13 @@
   location: [Open Source],
   contract-type: [],
   logo: image("../assets/kubernetes.png"),
-  summary: [High-availability Kubernetes cluster with GitOps and self-healing],
+  summary: [HA Kubernetes on Linux with PKI, secrets management and GitOps],
   description: list(
-    [Built *3-node* HA cluster on Talos Linux with automated failover and *99.9%* uptime],
-    [Implemented GitOps with ArgoCD, SOPS secrets, and Cilium networking],
-    [Self-hosted services: Keycloak SSO, Grafana/Loki observability, n8n automation],
+    [Built *3-node* HA cluster on Talos Linux with *KVM*, automated failover and *99.9%* uptime],
+    [Implemented *Vault* for PKI/secrets, Cilium for networking and service mesh],
+    [Self-hosted DNS, Keycloak SSO, Prometheus/Grafana observability stack],
   ),
-  tags: ("Kubernetes", "Talos", "ArgoCD", "Cilium", "OpenTofu", "Hetzner"),
+  tags: ("Kubernetes", "Linux", "Vault", "KVM", "Go", "Hetzner"),
 )
 
 
