@@ -35,7 +35,7 @@
     [Built internal tooling in *Go* for automation and developer experience],
     [Implemented *Kubernetes* workloads with security gates and automated releases],
   ),
-  tags: ("Kubernetes", "Go", "Linux", "CI/CD", "Docker", "Automation"),
+  tags: ("Kubernetes", "Go", "Linux", "Vault", "CI/CD", "Automation"),
 )
 
 #cv-entry(
