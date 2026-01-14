@@ -1,5 +1,5 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": letter
+#import "../src/lib.typ": letter
 #let metadata = toml("./metadata.toml")
 #let letter-language = sys.inputs.at("language", default: none)
 #let metadata = if letter-language != none {
@@ -11,28 +11,21 @@
 
 #show: letter.with(
   metadata,
-  sender-address: "Your Address Here",
-  recipient-name: "Company Name Here",
-  recipient-address: "Company Address Here",
+  sender-address: "Grenoble, France",
+  recipient-name: "Exoscale",
+  recipient-address: "Lausanne, Switzerland",
   date: datetime.today().display(),
-  subject: "Subject: Hey!",
-  signature: image("assets/signature.png"),
+  subject: "Site Reliability Engineer",
 )
 
-Dear Hiring Manager,
+Hi,
 
-I am excited to submit my application for the Senior Data Analyst position at ABC Company. With over 5 years of experience in data analysis and a demonstrated track record of success, I am confident in my ability to make a valuable contribution to your team.
+I've been following Exoscale for a while. A European cloud provider that actually owns its infrastructure and doesn't just resell AWS is rare, and it's exactly the kind of platform I want to work on.
 
-In my current role as a Data Analyst at XYZ Company, I have gained extensive experience in data mining, quantitative analysis, and data visualization. Through my work, I have developed a deep understanding of statistical concepts and have become adept at using tools such as SQL, Python, and R to extract insights from complex datasets. I have also gained valuable experience in presenting complex data in a visually appealing and easily accessible manner to stakeholders across all levels of an organization.
+I've spent the last 6 years building infrastructure where uptime matters. At EDF, I designed a platform that lets 15 engineers deploy on their own, with proper SLOs and on-call processes. Before that, I ran a hosting platform with 500+ VMs on KVM and Proxmox for 4 years, with full 24/7 responsibility.
 
-I believe that my experience in data analysis makes me an ideal candidate for the Senior Data Analyst position at ABC Company. I am particularly excited about the opportunity to apply my skills to support your organization's mission and drive impactful insights. Your focus on driving innovative solutions to complex problems aligns closely with my own passion for using data analysis to drive positive change in organizations.
+I code in Go, I hold CKA and CKAD certifications, and I sell a production Kubernetes template (Vault, Cilium, Talos) to clients through etcd.me.
 
-In my current role, I have been responsible for leading data projects from initiation to completion. I work closely with cross-functional teams to identify business problems and use data to develop solutions that drive business outcomes. I have a proven track record of delivering high-quality work on time and within budget.
+I'm relocating to Lausanne and I'd love to contribute to what you're building.
 
-Furthermore, I have extensive experience in developing and implementing data-driven solutions that improve business operations. For example, I have implemented predictive models that have improved sales forecasting accuracy by 10%, resulting in significant cost savings. I have also developed dashboards that provide real-time insights into business performance, enabling stakeholders to make more informed decisions.
-
-As a highly motivated and detail-oriented individual, I am confident that I would thrive in the fast-paced and dynamic environment at ABC Company. I am excited about the opportunity to work with a talented team of professionals and to continue developing my skills in data analysis.
-
-Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
-
-Sincerely,
+Sofiane Djerbi
