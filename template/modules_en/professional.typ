@@ -41,7 +41,7 @@
 #cv-entry(
   title: [Founder & SRE],
   society: [*etcd.me* (Infrastructure)],
-  date: [2024 - Present],
+  date: [Project],
   location: [Open Source],
   contract-type: [],
   logo: image("../assets/kubernetes.png"),
